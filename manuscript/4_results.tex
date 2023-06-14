@@ -1,102 +1,144 @@
-\section{Results and discussion}\label{results}
-This section presents the main findings of the Austrian case study. It is structured in three parts. First, Sections \ref{res_grid2030} and \ref{res_grid2040} present the Austrian gas grid in 2030 and 2040 respectively. The quantitative results for grid length, investment, and operating costs are presented for both grids. Building on this, Section \ref{res_grid_charges} focuses on the grid costs and compares the grid charges of customers today with those in 2030 and 2040. 
+\section{Results}\label{results}
+This section shows the main findings of the Austrian case study. As described above, results for the four scenarios Electrification (Elec), Green Gases (GG), Decentralized Green Gases and Green Methane (GM) are presented. It is structured in three parts. First, Sections \ref{res_grid2030} and \ref{res_grid2040} present the Austrian gas grid in 2030 and 2040 respectively. The quantitative results for grid length, operating and investment costs are presented for both years in detail. Building on this, Section \ref{res_grid_charges} focuses on the costs of the grid and shows the grid charges for customers in 2040. 
 
-\subsection{Gas grid 2030}\label{res_grid2030}
+\subsection{Austrian gas grid in 2030}\label{res_grid2030}
+The Austrian gas grid in 2030 is shown in Figure \ref{fig_grid_2030}. The grid, which is the same in all four scenarios, is very similar to the initial grid in 2025 and is only slightly smaller. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/results/gas_grid_2030_all_scenarios.pdf}
+	\caption{Austrian gas grid in 2030 at the transmission (blue), high-pressure (red) and mid-pressure (green) pressure levels in all four scenarios.}
+	\label{fig_grid_2030}
+\end{figure}
+
+The main reason for the reduction is the use of redundancies and duplicate structures in the grid as a result of declining gas demand. Table \ref{tab_compare_initial_2030} shows the reduction in the grid length at the high-pressure and mid-pressure levels in the four scenarios. 
+
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{.5em}
+	\resizebox{0.9\textwidth}{!}{
+		\begin{tabular}{lccccc}
+			\toprule
+			& 2025 & \multicolumn{4}{c}{2030}\\\cmidrule(lr){2-2}\cmidrule(lr){3-6}
+			Pressure level & Initial grid & Elec & GG & DGG & GM\\\cmidrule(lr){1-2}\cmidrule(lr){3-6}
+			\multirow{2}{*}{High-pressure} & \multirow{2}{*}{\SI{1449}{km}} & \SI{-172}{km}  & \SI{-142}{km} & \SI{-142}{km}  & \SI{-131}{km}\\
+			&  & (\SI{-11.9}{\%}) & (\SI{-9.8}{\%}) & (\SI{-9.8}{\%}) & (\SI{-9.0}{\%})\\\hdashline
+			\multirow{2}{*}{Mid-pressure} & \multirow{2}{*}{\SI{3218}{km}} & \SI{-283}{km}  & \SI{-200}{km} & \SI{-186}{km}  & \SI{-208}{km}\\
+			& & (\SI{-8.8}{\%}) & (\SI{-6.2}{\%}) & (\SI{-5.8}{\%}) & (\SI{-6.5}{\%})\\
+			\bottomrule
+	\end{tabular}}
+	\caption{Absolute and relative reduction in the length of the gas grid at the high-pressure and mid-pressure levels by 2030 compared to the initial grid in 2025. Abbreviations: Electrification (Elec), Green Gases (GG), Decentralized Green Gases (DGG), Green Methane (GM).}
+	\label{tab_compare_initial_2030}
+\end{table}
+
+The reduction in the grid length at the high-pressure level varies between \SI{-131}{km} and \SI{-172}{km} in the GM and Elec scenarios respectively. The reduction in the grid length at the mid-pressure level varies between \SI{-186}{km} and \SI{-283}{km} in the DGG and Elec scenarios respectively. Removing redundant gas pipelines reduces the operating costs of the grid.\footnote{In reality, these gas pipelines, especially at the transmission and high-pressure levels, can form the core of a hydrogen network. For further details, see for example, the plans for the Austrian hydrogen grid by 2030 published by the Austrian gas network operator \cite{aggm_agid}.} The operating costs of the gas grid, which are mainly fixed pipeline costs, decrease compared to the initial grid in 2025 and are around \SI{110}{MEUR} in all four scenarios in 2030. Note that energy costs for the compressor are not included. By 2030, virtually no gas pipelines are decommissioned due to ageing or because the pipeline is no longer used to transport gas. The assumed young grid age also leads to very low replacement investments into the gas grid. In total, those investments vary by 2030 between \SI{15}{MEUR} and \SI{18}{MEUR} in the Elec and GM scenarios respectively. Note that in the model here, replacement investment is necessary when a pipeline reaches its technical lifetime of \SI{75}{years}. At this point, the model decides whether to invest in replacing the pipeline or to decommission it due to its age. 
+
+\subsection{Austrian gas grid in 2040}\label{res_grid2040}
+The Austrian gas grid in 2040 differs significantly between the four scenarios. Four different gas grids emerge, which are mainly determined by the assumptions of the underlying scenarios. Figures \ref{fig_grid_2040_small} and \ref{fig_grid_2040_large} show the smallest and largest gas grids in terms of grid length. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/results/gas_grid_2040_elec.pdf}
+	\caption{Austria's smallest gas network by 2040 in the scenario Electrification (Elec). Colours: transmission (blue), high-pressure (red) and mid-pressure (green).}
+	\label{fig_grid_2040_small}
+\end{figure}
+
+The smallest grid is in the Elec scenario and the largest in the GM scenario. The gas grids of the remaining two scenarios GG and DGG are shown in \ref{app_results_2040_extension}. They lie between the two extreme grids in terms of size. Table \ref{tab_compare_initial_2040} quantifies the size of the gas grids in 2040 in all the four scenarios by comparing the absolute length of the grids as well as the absolute and relative reduction of grid lengths compared to the initial grid in 2025.  In absolute numbers, the reduction of grid length at the mid-pressure level is more significant than at the high-pressure level. In particular, the reduction in the grid length at the mid-pressure level is equally greatest in the two scenarios Elec and GG the greatest with \SI{-1316}{km} and  \SI{-40.9}{\%} compared to the initial grid in 2025. The smallest reduction in length at the mid-pressure level among the four scenarios is with \SI{-811}{km} (\SI{-40.9}{\%}) compared to the initial grid in 2025) in the DGG scenario. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/results/gas_grid_2040_gm.pdf}
+	\caption{Austria's largest gas network by 2040 in the scenario Green Methane (GM). Colours: transmission (blue), high-pressure (red) and mid-pressure (green).}
+	\label{fig_grid_2040_large}
+\end{figure}
+
+The main reason here for the relatively small reduction in the mid-pressure grid length is the significant decentralized production and injection of renewable gas. 
+
+\begin{table}[h!]
+	\centering
+	\setlength{\extrarowheight}{.5em}
+	\resizebox{1\textwidth}{!}{
+		\begin{tabular}{llrrrr}
+			\toprule
+			& & \multicolumn{4}{c}{2040}\\\cmidrule(lr){3-6}
+			Pressure level & Indicator & \multicolumn{1}{c}{Elec} & \multicolumn{1}{c}{GG} & \multicolumn{1}{c}{DGG} & \multicolumn{1}{c}{GM}\\\cmidrule(lr){1-2}\cmidrule(lr){3-6}
+			\multirow{3}{*}{High-pressure} & Abs. grid length in 2040& \SI{964}{km}  & \SI{965}{km} & \SI{974}{km}  & \SI{1105}{km}\\
+			 & Abs. reduction to 2025 & \SI{-485}{km}  & \SI{-484}{km} & \SI{-475}{km}  & \SI{-344}{km}\\
+			 & Rel. reduction to 2025 & \SI{-33.5}{\%}& \SI{-33.4}{\%}& \SI{-32.8}{\%}&\SI{-23.7}{\%}\\\hdashline
+ 			\multirow{3}{*}{Mid-pressure} & Abs. grid length in 2040& \SI{1902}{km}  & \SI{1902}{km} & \SI{2407}{km}  & \SI{2331}{km}\\
+			 & Abs. reduction to 2025 & \SI{-1316}{km}  & \SI{-1316}{km} & \SI{-811}{km}  & \SI{-887}{km}\\
+			 & Rel. reduction to 2025 & \SI{-40.9}{\%}& \SI{-40.9}{\%}& \SI{-25.2}{\%}&\SI{-27.6}{\%}\\
+			\bottomrule
+	\end{tabular}}
+	\caption{Absolute length of the grids 2040 in the four scenarios as well as the absolute and relative reduction of grid lengths compared to the initial grid in 2025 at the high-pressure and mid-pressure levels. Abbreviations: Electrification (Elec), Green Gases (GG), Decentralized Green Gases (DGG), Green Methane (GM).}
+	\label{tab_compare_initial_2040}
+\end{table}
+
+The injection leads to an increased use of mid-pressure pipelines. Figure \ref{fig_reduction_waterfall} shows the grid length in the two extreme scenarios Elec (top) and GM (bottom) at high-pressure (left) and mid-pressure (right) levels. It highlights the reduction in grid length by 2030 and 2040. The grid length in 2025 is shown on the far left and in 2040 on the far right. 
+
+\begin{figure}[h]
+	\begin{subfigure}[c]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/results/waterfall/waterfall_elec_high.pdf}
+		\vspace{-0.6cm}
+		\subcaption{Elec | High-pressure}
+		\label{Fig:a}
+	\end{subfigure}
+	\begin{subfigure}[c]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/results/waterfall/waterfall_elec_mid.pdf}
+		\vspace{-0.6cm}
+		\subcaption{Elec  | Mid-pressure}
+		\label{Fig:b}
+	\end{subfigure}
+	\newline
+	\newline
+	\newline
+	\begin{subfigure}[c]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/results/waterfall/waterfall_gm_high.pdf}
+		\vspace{-0.6cm}
+		\subcaption{GM | High-pressure}
+		\label{Fig:c}
+	\end{subfigure}
+	\begin{subfigure}[c]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/results/waterfall/waterfall_gm_mid.pdf}
+		\vspace{-0.6cm}
+		\subcaption{GM | Mid-pressure}
+		\label{Fig:d}
+	\end{subfigure}
+	\caption{Comparison of the Austrian gas grid in 2025 and 2040 in the scenarios extreme scenarios Electrification (Elec) and Green Methane (GM) at high-pressure and mid-pressure levels. In the Elec and GM scenarios, the smallest and the largest gas grids are obtained in terms of the size of the grids.}
+	\label{fig_reduction_waterfall}
+\end{figure}
+
+The operating costs of the gas grid decrease compared to 2025. They vary between \SI{87.5}{MEUR} and \SI{93.0}{MEUR} in the Elec and GM scenarios respectively. \SI{50.0}{MEUR} (the same in all four scenarios) are accounted for the transmission level. The remaining costs are accounted for the high-pressure and mid-pressure level. Figure \ref{fig_grid_repl_inv} shows the total replacement investments in the gas grid in the four scenarios. It includes the replacement investments in 2030 mentioned in Section \ref{res_grid2030} above. The lowest total replacement investments are in the scenarios GG and Elec with \SI{143.0}{MEUR} and \SI{146.0}{MEUR} respectively. The highest replacement investments are in the GM scenario with \SI{185.0}{MEUR}. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/results/total_replacement_inv/replace_inv_2040.pdf}
+	\caption{Total replacement investments in the Austrian gas grid until 2040 in the four scenarios.}
+	\label{fig_grid_repl_inv}
+\end{figure}
+
+\subsection{Grid charges for customers in 2040}\label{res_grid_charges}
+This section presents an analysis of the cost-effectiveness of the gas grid in four different scenarios. The average grid costs are calculated by dividing the total annual grid costs by the gas demand supplied by the grid, and these figures are provided. These average grid costs serve as a basis for estimating grid charges for customers in 2040. It should be noted that determining grid charges based on minimizing system costs is challenging due to regulatory considerations. Nevertheless, regulatory mechanisms often rely on approaches that aim to minimize system costs. Therefore, it is important to consider and interpret the following results from this perspective. In particular, the different grid costs provide a different perspective on comparing the four scenarios.\vspace{0.3cm}
+
+Figure \ref{fig_grid_charges} shows the grid costs in 2040 in the four different scenarios. The horizontal axis shows the gas demand supplied by the grid in TWh. The Elec scenario is therefore on the far left, as it has the lowest gas demand of the four scenarios. At the same time, the GM scenario, which has the highest gas demand among the scenarios, is on the far right. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/results/grid_charges/grid_charges.pdf}
+	\caption{Total replacement investments in the Austrian gas grid until 2040 in the four scenarios.}
+	\label{fig_grid_charges}
+\end{figure}
 
 
+\section{Synthesis}\label{synthesis}
+% In a first sub-section, you should refer to your research questions in Chapter 1 again and focus on whether / how they have been answered
 
+% Secondly, explain whether upscaling and transferability of the results is possible under varying framework conditions / circumstances / boundaries (spatially, temporally, sociologically, etc.)
 
-\subsection{Gas grid 2040}\label{res_grid2040}
+% Thirdly, explain the strengths and limitations of the methodology used and the lessons learned
 
-\subsection{Development of grid charges}\label{res_grid_charges}
-
-
-
-
-%This section presents the most relevant results of the analyzed test bed in Vorarlberg, Austria. Section \ref{modelrun1} presents the cost-optimal gas network without an ensured supply of available gas demands (model run 1). Section \ref{modelrun2} puts focus on the (nodal) shadow prices of the cost-optimal gas network without ensured supply (model run 2). Especially, the latter highlights the impact of supplying additional gas demands at the community (or local administrative unit (LAU)) level on the network planning. Section \ref{modelrun3} shows the cost-optimal gas network with ensured supply (model run 3). Section \ref{res:com} compares total costs and shadow prices \replaced[]{with and without}{w/} ensured supply. This includes, the socialization of network costs until 2050. Finally, Section \ref{res:lum} shows the cost-optimal gas network without ensured supply under the lumpiness of gas pipelines. 
-%
-%\subsection{Cost-optimal gas network without an ensured supply of gas demand (CO)}\label{modelrun1}
-%In this case, the planning decision is made as follows: if the network operator can treat all energy services equally and thus can decide without restrictions if gas demands are supplied or not, then the gas networks will look like those presented here. Accordingly, it is assumed that competitive alternatives without depedence on gas networks exist for each energy service need. \added[]{Note that the costs of customers not served by the network are not explicitly considered. The shadow prices (discussed in the following section) give a quantitative indication of these costs even without taking them explicitly into account.} Figure \ref{fig:1} shows an overview of the most relevant results in this case. Figure \ref{fig:1} (a) shows the high- and mid-pressure gas networks. Given the existing gas networks (see Figure \ref{fig:comparison}), it is evident that all high-pressure pipelines (in red) are refurbished. At the same time, \SI{59}{\%} of the length of mid-pressure pipelines are refurbished and \SI{41}{\%} are decommissioned. The maximum capacity of the high-pressure network level is \SI{161.92}{} and \SI{40.58}{MW} of the mid-pressure (see Figure \ref{fig:1} (b)). Figure \ref{fig:1} (c) and (d) shows the development of gas demands supplied and not supplied for both pressure/network levels. Particularly, high shares of the mid-pressure demands are covered as a result of comparable high revenues at this pressure level. At the same time, no high-pressure gas demands are covered after 2030. Note that 2030 is the assumed year of the decommissiong and refurbishment investment decision for all pipelines within the networks. 
-%
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=1\linewidth]{figures/modelrun1/overview.eps}
-%	\caption{Cost-optimal gas networks without ensured supply (model run 1): (a) high- and mid-pressure pipelines, (b) overview of max pipeline capacity, length, and share of decommissioned and refurbished pipeline lengths, (c) demand supplied, and (d) demand not supplied at the high- and mid-pressure network level.}
-%	\label{fig:1}
-%\end{figure}
-%
-%\subsection{Shadow prices for supplying additional gas demands of the cost-optimal gas network without an ensured supply of gas demands}\label{modelrun2}
-%This section takes the cost-optimal gas network without an ensured supply of gas demands as a starting point and investigates the dual variables and shadow prices of the (nodal) gas balance constraints (see Section \ref{runs}). In this case, emphasis is put on the question: What costs arise and what network adaption is required if the network operator is required to supply an additional gas demand at the nodal level? Since the results of the previous section indicate that mid-pressure gas demands are supplied only (see particularly Figure \ref{fig:1} (c)), this section highlights (nodal) shadow prices of supplying additional gas demands at the mid-pressure network level. \added[]{The shadow prices are the dual variable of the gas demand constraint from Equation \ref{eq:notsupplied}. Here, the shadow price indicates how the value of the objective function would change if additional demand were supplied at a node. Note that these shadow prices refer to network costs only.}\vspace{0.3cm} 
-%
-%
-%
-%Figure \ref{fig:2} shows shadow prices for LAUs between 2025 and 2050. Figure \ref{fig:2} (a) shows the heatmap of the shadow prices, where the x-axis covers each year between 2025 and 2050 and the y-axis each node potentially connected to the mid-pressure network level. Thereby, each combination (i.e., node and year) is divided on the basis of four categories (i) No expansion (reduced), which means that the network is able to supply the additional gas demand without expansion and thus the objective function value is reduced by the revenues for selling the additional gas demand at the mid-pressure network level; (ii) expansion (reduced), which means that the network needs to be extended to supply the additional gas demand but the objective function value remains reduced but less than by the total revenues for selling gas demand at the mid-pressure network level; (iii) expansion (unaffected), which means that the network must be extended and the objective value is unaffected and remains constant (i.e., shadow price equal to 0), and (iv) expansion (increased), which means that the network needs to be extended and the objective value would be increased (i.e., shadow price greater than 0).
-%
-%\begin{figure*}[t!]
-%	\centering
-%	\begin{subfigure}[t]{0.5\textwidth}
-%		\centering
-%		\includegraphics[height=2in]{figures/modelrun2/hm_shdprice.eps}
-%		\caption{Heat map/capability of the network}
-%		\label{fig:2a}
-%	\end{subfigure}%
-%	~ 
-%	\begin{subfigure}[t]{0.5\textwidth}
-%		\centering
-%		\includegraphics[height=2in]{figures/modelrun2/shadow_example.eps}
-%		\caption{Near-feed and off-feed node}
-%	\end{subfigure}
-%	\caption{Shadow prices for supplying additional gas demands at the mid-pressure network level: (a) heat map identifying the capability of the gas network to supply additional mid-pressure gas demands, and (b) temporal development of the shadow price for a near-feed node (Dornbirn) and a off-feed node (Bludenz).}
-%	\label{fig:2}
-%\end{figure*}
-%
-% Figure \ref{fig:2} (b) presents the exact numbers of the shadow prices for two representative nodes, namely, a near-feed node (Dornbirn) and an off-feed node (Bludenz). Dornbirn is therefore near the gas supply/source node, and Bludenz is further away from it. The shadow price at the off-feed node has several peaks (three are marked in 2030, 2035, and 2046) and its maximum is \SI{299.2}{EUR\per MWh} in 2030. The near-feed node has two peaks (in 2030 and 2035) and its maximum is \SI{109}{EUR \per MWh} in 2030. Particularly, the development of the near-feed node after 2036 shows the capability of supplying additional gas demands since pipelines capacities are available without expansion.
-%
-%
-%
-%\subsection{Cost-optimal gas network with an ensured supply of gas demands (ES)}\label{modelrun3}
-%This section shows the results in the case that the network operator should cover all gas demands within the supply area. Contrary to the previous two sections, no gas demands are not supplied. Figure \ref{fig:result2} shows an overview of the most relevant results in this case. 
-%
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=1\linewidth]{figures/modelrun3/network.eps}
-%	\caption{Cost-optimal gas networks with ensured supply (model run 3): (a) high- and mid-pressure pipelines, (b) overview of max pipeline capacity, length, and share of decommissioned and refurbished pipeline lengths, (c) demand supplied, and (d) demand not supplied at the high- and mid-pressure network level.}
-%	\label{fig:result2}
-%\end{figure}
-%
-%Again, all high-pressure pipelines are refurbished; however, \SI{28}{\%} of mid-pressure pipeline lengths are decommissioned. The maximum capacity of the high-pressure network level is \SI{465.06}{} and \SI{66.36}{MW} of the mid-pressure. Unsurprisingly, the objective function value increases significantly compared with the case without ensured supply. The objective function value increases by \SI{96.29}{MEUR} \added[]{from} \SI{375.1}{MEUR} \added[]{to} \SI{471,39}{MEUR}. This value has great importance and implications for the practical planning of future gas networks. It can serve as a benchmark and is further investigated in the following section, which is dedicated to the comparison of the different cases.
-%
-%\subsection{Comparison of the cost-optimal gas network with and without ensured supply of gas demands}\label{res:com}
-%This section compares the cost-optimal gas network with and without an ensured supply of gas demands. We use the following abbreviations, as already used in Table \ref{tabelle:modelruns}: CO for the cost-optimal network without ensured supply and ES with ensured supply. We emphasize the difference in total costs for the network operator and the shadow prices. Figure \ref{fig:result3} shows the most relevant results to compare the two cases, namely, the extra costs in the case of ensured supply (see Figure \ref{fig:result3} (a) and (b)), the distribution of 2030's shadow prices (see Figure \ref{fig:result3} (c)), and shadow price development between 2030 and 2050 for the near-feed and off-feed nodes.
-%
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=1\linewidth]{figures/Comparison/network.eps}
-%	\caption{Comparison of the cost-optimal gas network \added[]{with and without} ensured supply of gas demands: (a) and (b) socialized extra costs, (c) 2030's shadow prices, and (d) shadow prices between 2025 and 2050 for the near-feed and off-feed node. CO: Cost-optimal without ensured supply; ES: Cost-optimal with ensured supply.}
-%	\label{fig:result3}
-%\end{figure}
-%
-%As mentioned, the ensured supply of all gas demands within the network results in extra costs of \SI{96.29}{MEUR}. Given an equal allocation to the LAUs and years, this results in extra costs of \SI{107}{kEUR} per LAU and year. This value must be considered as an additional offset to the shadow prices of the cost-optimal network with ensured supply to obtain the effective shadow price and respect the already increasing total costs of the network operator. Nevertheless, even the comparison of 2030's values without this offset shows that the shadow prices in the case with ensured supply increase significantly compared with the case without ensured supply. Particularly, the median raises from approximately \SI{100}{EUR \per MWh} to \SI{400}{EUR \per MWh}. Additionally, the max value raises from approximately \SI{300}{} to \SI{1300}{EUR \per MWh}. This increase in shadow prices is also presented in Figure \ref{fig:result3} (d), where again the near-feed and off-feed nodes are shown. 
-%
-%\subsection{Cost-optimal gas networks without ensured supply under lumpiness of gas pipelines}\label{res:lum}
-%This section shows the results of the cost-optimal gas network without ensured supply. Contrary to the results presented above, we consider the lumpiness of gas pipelines in the network operator's planning decision. This analysis completes the results section against the background of two important aspects. First, considering the lumpiness of gas network pipelines increases the significance of the generated results for practical proposals since the network operator's decision is related to choosing specific diameters of gas pipelines. Second, however, the introduction of the lumpiness of gas pipelines extends the previous linear program to a mixed-integer linear program. This is why no dual variables and shadow prices can be obtained. Table \ref{tab:lum} in \ref{app:lum} shows the assumptions for the lumpiness of gas pipelines. We restrict ourselves to 14 different capacities (diameters between 0.1 and \SI{1.3}{\meter}) for both the high- and mid-pressure pressure/network levels. Figure \ref{fig:result4} summarizes the results of the generated gas networks in case of lumpiness. Interestingly, the consideration of lumpiness of gas pipelines leads even in the cost-optimal case network without ensured supply to the decommissioning of \SI{23}{\%} high-pressure and \SI{45}{\%} mid-pressure pipeline length. Furthermore, only gas demands at the mid-pressure network level are supplied (as in Section \ref{modelrun1} and model run 1). Again, all the high-pressure gas demands are not supplied. 
-%
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=1\linewidth]{figures/lumpiness/network.eps}
-%	\caption{Cost-optimal gas networks with ensured supply under lumpiness of gas pipelines: (a) high- and mid-pressure pipelines, (b) overview of max pipeline capacity, length, and share of decommissioned and refurbished pipeline lengths, (c) demand supplied, and (d) demand not supplied at the high- and mid-pressure network level.}
-%	\label{fig:result4}
-%\end{figure}
-%
-%Figure \ref{fig:result5} shows a comparison of the results under lumpiness with the previous results of the cost-optimal gas network \replaced[]{with and without}{w/} ensured supply (i.e., CO and ES). Particularly, it shows the impact of lumpiness on an optimal network design decision. In summary, the following interesting findings can be observed:
-%\begin{itemize}
-%	\item The cost-optimal network design without ensured supply under lumpiness of gas pipelines increases the total costs (i.e., objective function value) by only 1\% (Figure \ref{fig:result5}, top left) but at the same time the amount of mid-pressure gas demand increases (Figure \ref{fig:result5}, bottom right).
-%	\item Moreover, the lumpiness of gas pipelines results in both the decommissioning of high shares of the high-pressure network/pressure level (Figure \ref{fig:result5}, top right) and the further decreasing of the maximum pipeline capacity within the network (Figure \ref{fig:result5}, bottom left).
-%\end{itemize}
-%
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=1\linewidth]{figures/synthese/comparison.eps}
-%	\caption{Results of the cost-optimal gas networks without ensured supply under lumpiness of gas pipelines (CO-L). Top left: Comparison of the total costs. Top right: Decommissioning and refurbishment decision at the mid- and high-pressure network level. Bottom left: Maximum pipeline capacity. Bottom right: Mid- and high-pressure gas demand that is supplied or not.}
-%	\label{fig:result5}
-%\end{figure}
+% gemeinsame Nutzung von Biogasanlagen
