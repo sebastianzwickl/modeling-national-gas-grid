@@ -38,7 +38,7 @@ The Austrian gas grid in 2040 differs significantly between the four scenarios. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/results/gas_grid_2040_elec.pdf}
+	\includegraphics[width=1\linewidth]{figures/results/gas_grid_2040_elec_cleaned.pdf}
 	\caption{Austria's smallest gas network by 2040 in the scenario Electrification (Elec). Colours: transmission (blue), high-pressure (red) and mid-pressure (green).}
 	\label{fig_grid_2040_small}
 \end{figure}
@@ -124,7 +124,7 @@ The operating costs of the gas grid decrease compared to 2025. They vary between
 \subsection{Grid charges for customers in 2040}\label{res_grid_charges}
 This section presents an analysis of the cost-effectiveness of the gas grid in four different scenarios. The average grid costs are calculated by dividing the total annual grid costs by the gas demand supplied by the grid, and these figures are provided. These average grid costs serve as a basis for estimating grid charges for customers in 2040. It should be noted that determining grid charges based on minimizing system costs is challenging due to regulatory considerations. Nevertheless, regulatory mechanisms often rely on approaches that aim to minimize system costs. Therefore, it is important to consider and interpret the following results from this perspective. In particular, the different grid costs provide a different perspective on comparing the four scenarios.\vspace{0.3cm}
 
-Figure \ref{fig_grid_charges} shows the grid costs in 2040 in the four different scenarios. The horizontal axis shows the gas demand supplied by the grid in TWh. The Elec scenario is therefore on the far left, as it has the lowest gas demand of the four scenarios. At the same time, the GM scenario, which has the highest gas demand among the scenarios, is on the far right. 
+Figure \ref{fig_grid_charges} shows the (average) grid costs in 2040 in the four different scenarios. Note that the horizontal axis is the gas demand supplied by the grid in TWh. The Elec scenario is therefore on the far left, as it has the lowest gas demand of the four scenarios. At the same time, the GM scenario, which has the highest gas demand among the scenarios, is on the far right. 
 
 \begin{figure}[h]
 	\centering
@@ -133,6 +133,37 @@ Figure \ref{fig_grid_charges} shows the grid costs in 2040 in the four different
 	\label{fig_grid_charges}
 \end{figure}
 
+It is shown that the grid costs are the highest in the Elec scenario with \SI{7.0}{EUR \per MWh} and the lowest in the GM scenario with \SI{1.3}{EUR \per MWh}. The grid costs and its components of operating costs at the different pressure levels and gas demand supplied are summarized in Table \ref{tab_components_grid_costs}.
+
+\begin{table}[h!]
+	\centering
+	\setlength{\extrarowheight}{.5em}
+	\resizebox{0.85\textwidth}{!}{
+		\begin{tabular}{lrrrr}
+			\toprule
+			& \multicolumn{4}{c}{2040}\\\cmidrule(lr){2-5}
+			Components for calculating grid costs & Elec & GG & DGG & GM\\\hline
+			Transmission operating costs in MEUR & 0 & 0 &0  & \SI{50}{}\\
+			Distribution operating costs in MEUR & \SI{37.5}{} & \SI{39.3}{} & \SI{40.2}{} & \SI{43.0}{}\\
+			Capital expenditure in MEUR & \SI{13.0}{} & \SI{13.1}{} & \SI{15.0}{} & \SI{18.3}{}\\
+			Gas demand supplied in TWh & \SI{7.2}{} & \SI{9.5}{} & \SI{20.3}{} & \SI{84.2}{}\\\hline
+			Grid costs in EUR/MWh & \SI{7.0}{} & \SI{5.5}{} & \SI{2.7}{} & \SI{1.3}{}\\
+			\bottomrule
+	\end{tabular}}
+	\caption{Average grid costs and their components of operating costs and capital expenditure. The distribution operating costs encompass the high-pressure and mid-pressure levels. Separation between the transmission and distribution grids result in no transmission operating costs for the customers.}
+	\label{tab_components_grid_costs}
+\end{table}
+
+Note that the three scenarios Elec, GG and DGG assume a separation between the transmission and distribution grids (i.e., high and medium pressure levels). Therefore, the transmission operating costs for customers in these scenarios are zero. Consequently, it is assumed that customers requesting gas transport through Austria at the transmission level bear these costs. \textcolor{red}{Hier gehts morgen weiter.} 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/results/grid_charges_development/cleaned_grid_charges.pdf}
+	\caption{}
+	\label{fig_grid_charges_no_capex}
+\end{figure}
+
+Overestimate the replacement investment costs. 
 
 \section{Synthesis}\label{synthesis}
 % In a first sub-section, you should refer to your research questions in Chapter 1 again and focus on whether / how they have been answered
