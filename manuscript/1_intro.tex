@@ -1,35 +1,35 @@
 \section{Introduction}
 
-In Europe, the most efficient way of transporting natural gas has been piped and grid-related transport for decades. There are two main reasons for this. First, natural gas has been an extremely cheap energy source due to its unlimited availability through imports from bordering regions. Hence, large quantities of natural gas have been demanded to cover various energy services. Second, the transport of natural gas through pipelines over short and long distances was and is technically efficient and economically cheap because of good flow conditions regarding pressure levels and, thus, transport capacities. In the context of piped natural gas supply, Austria has a long tradition. Austria was one of the first Western European countries connected to natural gas pipelines. The "Trans Austria Gas Pipeline" (TAG) started operation in 1968 and connected Austria with Slovakia. The effects or consequences of this long history of natural gas in Austria are reflected in a high dependence on natural gas in providing energy services and a well-developed natural gas grid throughout the country.\vspace{0.3cm}
+In Europe, the most efficient way of transporting natural gas has been piped and grid-related transport for decades. There are two main reasons for this. First, natural gas has been an extremely cheap energy source due to its unlimited availability through imports from bordering regions. Hence, large quantities of natural gas have been demanded to cover various energy services. Second, the transport of natural gas through pipelines over short and long distances was and is technically efficient and economically cheap because of good flow conditions regarding pressure levels and, thus, transport capacities \cite{thomas2003review}. In the context of piped natural gas supply, Austria has a long tradition. Austria was one of the first Western European countries connected to natural gas pipelines. The "Trans Austria Gas Pipeline" (TAG) started operation in 1968 and connected Austria with Slovakia \cite{gas_connect_austria}. The effects or consequences of this long history of natural gas in Austria are reflected in a high dependence on natural gas in providing energy services \cite{eurostat_natural_gas} and a well-developed natural gas grid throughout the country \cite{econtrol_grid}.\vspace{0.3cm}
 
-However, natural gas grids face an uncertain future, as does the Austrian gas grid. European and national decarbonisation policies are pushing the use of natural gas towards renewable energy alternatives in all energy services. The consequence is a massive reduction in demand for natural gas. It is therefore unclear to what extent gas grids will still be needed. The main objective is to contribute to this discussion by quantifying the scope and size of the Austrian gas grid by 2040 under different decarbonization scenarios. The goal it to answer the following two research questions:
+However, natural gas grids face an uncertain future, as does the Austrian gas grid. European and national decarbonisation policies are pushing the use of natural gas towards renewable energy alternatives in all energy services. The consequence is a massive reduction in demand for natural gas \cite{repowereu}. It is therefore unclear to what extent gas grids will still be needed. The main objective is to contribute to this discussion by quantifying the scope and size of the Austrian gas grid by 2040 under different decarbonization scenarios. In particular, the goal it to answer the following two research questions:
 
 \begin{itemize}
 	\item How does Austria's natural gas grid today develop from today to 2040 under different decarbonization scenarios, ranging from electrification of most of energy services to importing renewable methane?
 	\item How do customer grid charges change by 2040 in a gas grid with a dominant supply of domestic renewable gas generation, such as the Austrian grid, while natural gas demand is declining?
 \end{itemize}
 
-\textcolor{red}{1) Wie wird diese Frage genau beantwortet; 2) Für wen ist diese Arbeit hilfreich. 3) Was wird nicht gemacht. 4) Organizer of the paper.}
+The analysis of the Austrian gas grid provides relevant insights for countries with a high potential for domestic renewable gas production in the future, such as Germany, Italy, and France (see in \cite{scarlat2018biogas}). Furthermore, the relevance of this case study must also be considered from a European perspective. The Austrian gas grid has historically been an important hub for the transmission and distribution of imported natural gas through Europe and provides ample storage capacities (see in \cite{sesini2021strategic}). Therefore, changes in the Austrian gas grid might also impact the gas grid of neighboring countries and vice versa.\vspace{0.3cm}
+
+A mixed-integer linear optimization approach is proposed to answer the research questions. The applied model considers the existing natural gas grid as a starting point and decides whether the grid covers the gas demand and whether domestic renewable gas production (i.e., biomethane) is injected into the grid. The model considers the existing pipelines' age and the necessary replacement investments if they reach their technical lifetime and the option of early decommissioning in case of no or insufficient use of pipelines to reduce grid operating costs. The study of four different scenarios ("Electrification", "Green Gases", "Decentralized Green Gases", and "Green Methane") ensures robustness while covering a wide range of possible future gas volume developments in demand, imports, exports, and generation. Therefore, the scenarios and work must be understood from a "what-if" perspective. Explicitly, no integrated energy system modeling across energy sectors and carriers is carried out. The work does not aim to answer how fossil fuel-based energy services should be decarbonized cost-effectively. Instead, the work aims to show the implications of different gas volume scenarios on the gas grid and its cost efficiency in the future.\vspace{0.3cm}
+
+The paper is organized as follows. Section \ref{stateoftheart} provides relevant literature on the topic and the novelties of this work. Section \ref{methodology} explains the applied method and the four scenarios in detail. Section \ref{results} present the results of the work, while Section \ref{synthesis} provides a synthesis and broad discussion of the findings. Finally, Section \ref{conclusions} concludes and outlines future research.
 
 
 
 
 
 
-
-
-
-
-das ist sicher ein genereller trend und trasferabel do all the european countries
-in einigen ländern, wie deutschland, italien und auch österreich, wird die renewable gas production eine rolle spielen.
-diese ist inbesondere in der fläche zu erwarten, könnte zu einem renewable betrieb von existierenden gasmetzen führen.
-gleichzeitig würde das zu einem netz in der fläche führen 
-außerdem spielt natürlich das thema hydrogen noch eine wichtige rolle. dessen rolle auf die gasnetze muss vermutlich unterschiedlich auf den netzebene gesehenm werden.
-auf der fernleitungsebene zeichnet sich ein sehr klares bild ab
-umwidmung da man stränge hat 
-hydrogen backbone etc.
-auf den untergelagerten netzebene (high. mid, und low pressure) ist die entwicklung unklar 
-nicht nur wo die verbräuche sitzen weiterbetrieb von leitungen, sondern auch durch die einspeisung
+%das ist sicher ein genereller trend und trasferabel do all the european countries
+%in einigen ländern, wie deutschland, italien und auch österreich, wird die renewable gas production eine rolle spielen.
+%diese ist inbesondere in der fläche zu erwarten, könnte zu einem renewable betrieb von existierenden gasmetzen führen.
+%gleichzeitig würde das zu einem netz in der fläche führen 
+%außerdem spielt natürlich das thema hydrogen noch eine wichtige rolle. dessen rolle auf die gasnetze muss vermutlich unterschiedlich auf den netzebene gesehenm werden.
+%auf der fernleitungsebene zeichnet sich ein sehr klares bild ab
+%umwidmung da man stränge hat 
+%hydrogen backbone etc.
+%auf den untergelagerten netzebene (high. mid, und low pressure) ist die entwicklung unklar 
+%nicht nur wo die verbräuche sitzen weiterbetrieb von leitungen, sondern auch durch die einspeisung
 
 
 
