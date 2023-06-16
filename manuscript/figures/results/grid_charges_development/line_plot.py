@@ -17,7 +17,28 @@ gm = [1.3, 1.1]
 x = [0, 1]
 
 for elec, color in [[elec, '#3F497F'], [gg, '#9DC08B'], [dgg, '#FF8551'], [gm, '#89CFFD']]:
-    ax.plot(x, elec, marker='d', color=color)
+    ax.plot(x, elec, 
+            marker='d', 
+            color=color, 
+            markersize=8,
+            markeredgewidth=0.25,
+            markeredgecolor="black"
+            )
+    ax.plot(x, elec, 
+            marker='d', 
+            color='black', 
+            linewidth=1.75,
+            zorder=-1, 
+            linestyle='solid'
+            )
+#     ax1.plot(
+#     verbrauch[2:4],
+#     netzentgelte[2:4],
+#     color="black",
+#     zorder=-1,
+#     linewidth=2.5,
+#     linestyle="solid",
+# )
     ax.text(
             0.55, 
             elec[1] + (elec[0] - elec[1]) / 2 + 0.35,
@@ -32,7 +53,8 @@ ax.set_xlim([-0.25, 1.25])
 ax.set_ylim([0, 8])
 
 ax.set_xticks([0, 1])
-ax.set_xticklabels(['With capex', 'Without capex'])
+ax.set_xticklabels(['75 yrs.', '90-100 yrs.'])
+ax.set_xlabel('Technical lifetime of pipelines')
 
 ax.spines[["top", "right", "left"]].set_visible(False)
 ax.grid(which="major", axis="y", color="#758D99", alpha=0.25, zorder=1)
