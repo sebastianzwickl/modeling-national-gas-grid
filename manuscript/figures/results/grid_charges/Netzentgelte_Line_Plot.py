@@ -24,7 +24,7 @@ ax1.spines[["top", "right", "left"]].set_visible(False)
 ax1.grid(which="major", axis="y", color="#758D99", alpha=0.25, zorder=1)
 ax1.tick_params(left=False)
 ax1.spines["left"].set_linewidth(1.1)
-
+ax1.set_yticks([0, 1, 2, 3, 4, 5, 6, 7, 8])
 
 ax1.set_xlabel("Gas demand supplied by the grid in TWh")
 

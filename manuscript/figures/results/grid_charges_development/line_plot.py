@@ -51,6 +51,7 @@ for elec, color in [[elec, '#3F497F'], [gg, '#9DC08B'], [dgg, '#FF8551'], [gm, '
 
 ax.set_xlim([-0.25, 1.25])
 ax.set_ylim([0, 8])
+ax.set_yticks([0, 1, 2, 3, 4, 5, 6, 7, 8])
 
 ax.set_xticks([0, 1])
 ax.set_xticklabels(['75 yrs.', '90-100 yrs.'])
