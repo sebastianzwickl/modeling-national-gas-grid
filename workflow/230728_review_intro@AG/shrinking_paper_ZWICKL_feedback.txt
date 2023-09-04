@@ -1,0 +1,67 @@
+?
+
+A •	Eine abgerundete Geschichte aus 1) Introduction to 3) Method zu machen
+B •	RQs, Novelties und Ergebnisse iterativ zu checken (z.B. Erwartest du bei Kenntnisse der RQs & Novelties die Ergebnissbilder – passen diese 3 Teile zusammen?)
+C •	Wo fehlen Ergänzungen bezüglich beispielsweise Hydrogen, Natural Gas Imports, Gas Storage, etc.
+
+
+(A/B):
+
+	ad RQs: 
+		- RQ1: spezifischer formulieren ("how does it develope" -> its topology?)
+		- RQ2: what are the needed replacement investments (hängt meiner Meinung sehr mit Frage 1 zusammen bzw was ist der Unterschied - der monätere Aspekt?)
+		- RQ3: gas grid charges?
+		
+		
+		Are these well set-up in the intro?
+
+			exptected: setup in Intro: (-) History gas grid; (-) why is the future uncertain; (-) how are gas grid charges also relevant in this context
+			
+			ways to approach this story-line like: 
+				(Option 1) gas grid history, future uncertain; until now so cheap for everybody but what will be the future
+				(Option 2) Operator's perspective + regulation; future of gas grid topology + charges (würd besser auf RQ3 hinleiten)
+
+				-> derzeit: eher (1); 
+			
+			zu Absatz "relevancy of this paper": entweder in "synthesis" schieben; oder man rollt es über die allgemeine Schiene auf ( gas grid development in general -> Austrian case study 
+		
+
+	ad literature review (lr):
+		expected: (-) methodological (-) drivers of gas grid infrastructure development (-) gas grids in the face of decarb
+		
+		overall all points addressed in lr 
+		
+		potential improvments:
+			-> (2.1) eher Aufzählungen -> mehr benefit über "Was war deren Aussage?" (können wichtige Punkte zum Aufgreifen in der Synthese/Diskussion sein
+			-> (2.2) missing: What parameters/aspects of the gas grid developments were considered in the analysis
+				=> better set-up of novelties
+				
+
+	ad Novelties:
+		- N1: Austrian case study
+		- N2: ageing (method extension)
+		- N3: alternative supply options (method extension)
+
+	
+	ad Results: beantworten RQs soweit (-> Diskussion in Synthese adressiert die Punkte dann zureichend?)
+		zu novelties: N1, N2 also clearly addressed; N3? Are alternative supply options used? 
+	
+(C):
+	Infos that seem essential to understand results:
+		-> Scenarios: are essential base for the different possible outcomes
+		-> Recent historical data on the Austrian gas grid: concerning the age of pipelines. When were the last investments? (maybe figure on age structure will be helpful) => would also support the aging aspect that is addressed in RQ
+		-> "primary energy carrier: Hydrogen" => details on implementation? maybe elaborate on technical differences to natural gas distribution
+		-> cost estimations! also for alternative supply options!
+		-> visualization maps 
+
+potential discussion points resulting from this:
+	-> what is the driving factor for the future of the Austrian gas grid then looking at the range of results from the scenarios?
+	-> what may be the effect of the increasing gas grid charges?
+	-> what about these alternative supply options? will they be used or not 
+	-> (?) are the results in line with the hydrogen back bone plan ... 
+	
+	
+	
+		
+	
+	
