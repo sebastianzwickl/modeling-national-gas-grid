@@ -5,23 +5,28 @@
 \begin{document}
 \begin{frontmatter}
 
-\title{Shrinking together and pulling apart: the Austrian gas grid by 2040 under declining natural gas demand and increasing domestic renewable gas generation}
+\title{Shrinking together and pulling apart: insights from a national gas grid with declining natural gas demand and increasing domestic renewable gas generation by 2040}
+
 \author[1,2]{Sebastian Zwickl-Bernhard\corref{cor1}}
 \ead{zwickl@eeg.tuwien.ac.at}
 \author[3]{Aria Rodgarkia-Dara}
 \author[3]{Christoph Gatzen}
+\author[3]{Lino Sonnen}
+\author[3]{Anna Lane}
 \author[1]{Marcus Otti}
 \author[1]{Antonia Golab}
 \author[1,2]{Hans Auer}
 \cortext[cor1]{Corresponding author}
 \address[1]{Energy Economics Group (EEG), Technische Universität Wien, Gusshausstrasse 25-29/E370-3, 1040 Wien, Austria}
 \address[2]{Industrial Economics and Technology Management, Norwegian University of Science and Technology, Gløshaugen, Alfred Getz vei 3, Trondheim, 7491, Norway}
-\address[3]{Frontier Economics Limited, 71 High Holborn, London WC1V 6DA, United Kingdom}
+\address[3]{Frontier Economics Limited, Im Zollhafen 24, 50678 Köln, Deutschland}
 
 \begin{abstract}
+	This paper studies the development of the Austrian gas grid by 2040 under different decarbonization scenarios, ranging from electrifying most energy services to importing large amounts of renewable methane. The Austrian gas grid serves as a case study representative for those gas grids confronted with a drop in natural gas demand and an increase in domestic renewable gas generation in the future. A mixed-integer optimization model with a focus on the detailed representation of the existing grid (gas grid levels, pipeline capacity, route, and age) is used to determine the cost-optimal trade-off decision between expected low-utilized gas pipelines and an off-grid supply alternative (e.g., trucking and on-site gas storage) in a decarbonized Austrian and European energy system. Based on the required gas grid 2040 and its annual grid costs, estimates for tariffs of end customers are given. The paper's main conclusion is that the domestic distributed renewable gas generation uptake will be associated with the need for an area-wide gas grid, but one that will be significantly less utilized.
 \end{abstract}
 
 \begin{keyword}
+	Gas grid; natural gas demand; domestic renewable gas generation; 2040
 
 \end{keyword}
 \end{frontmatter}
@@ -50,7 +55,7 @@
 		{$CoAS$} & Cost of an alternative off-grid gas supply & \SI{}{EUR}\\
 		{$\gamma_{p,l,y}$} & Transport capacity of pipeline $p$ at $l$ in $y$& \SI{}{GW}\\
 		{$\sigma_{p,l,y}$} & Decommissioning decision of pipeline $p$ at $l$ in $y$ (binary)& -\\
-		{$q^{fed, local}_{n, l, y, m}$} & Local gas production injected into the gas grid at $n$ and $l$ in $y$ and $m$& \SI{}{Year}\\
+		{$q^{fed, local}_{n, l, y, m}$} & Local gas generation injected into the gas grid at $n$ and $l$ in $y$ and $m$& \SI{}{Year}\\
 		\hline
 		\multicolumn{2}{l}{Relevant parameters}\\
 		\hline
@@ -64,41 +69,102 @@
 
 \input{1_intro}
 \input{2_state}
-\newpage
 \input{3_materials}
 \newpage
 \input{4_results}
-\newpage
 \input{5_synthesis}
 \input{6_conclusions}
-\newpage
 \section*{Declaration of interests}
 None.
 \section*{Data availability}
-The original data used in this study are publicly available. The compiled dataset is published on Zenodo at \textcolor{red}{Link einfügen!}. 
+The original data used in this study are publicly available. The compiled dataset is published on Zenodo at \textcolor{gray}{(Link as soon as the paper has been published).} 
 \section*{Code availability}
-The code is published under an open license on GitHub at \textcolor{red}{Link einfügen!}. 
+The code is published under an open license on GitHub at \textcolor{gray}{(Link as soon as the paper has been published).}
+
+\section*{Acknowledgments}
+This work was supported by the Federal Ministry Republic of Republic Austria
+for Climate Action, Environment, Energy, Mobility, Innovation and Technology under the project Gas-Infra-AT-2040 ("The future role of gas infrastructure in a climate-neutral Austria by 2040"). The authors acknowledge TU Wien Bibliothek for financial support through its Open Access Funding Programme.
+
 
 \bibliography{mybibfile}
 \appendix
 \setcounter{table}{0}
 \setcounter{figure}{0}
-
+\newpage
 \section{Gas grid parameters and empirical scaling}\label{paramter}
-% Kosten einer Alternativen Versorgung
+The economic parameters and assumptions for the gas grid (and its pipelines) and the alternative off-grid solution (trucking and on-site gas storage) are summarized in Table \ref{tab:parameters} and Table \ref{tab:off_grid} respectively. 
 
-% investitionskosten abschätzungen
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{1em}
+	\resizebox{1\textwidth}{!}{
+			\begin{tabular}{p{0.2\linewidth}|p{0.225\linewidth}|p{0.25\linewidth}|p{0.325\linewidth}}
+				\toprule
+				\raggedright Investment costs & \raggedright Pipeline (Transmission) & \raggedright \SI{120}{EUR \per MW \per km} and \SI{2200}{EUR \per m} & \raggedright DN1000; average operating pressure approx. \SI{55}{bar}; Gas flow velocity approx. \SI{10}{m \per s}\arraybackslash\\\hline
+				\raggedright Investment costs & \raggedright Pipeline (High-Pressure) & \raggedright \SI{170}{EUR \per MW \per km} and \SI{1590}{EUR \per m} & \raggedright DN800; average operating pressure approx. \SI{55}{bar}; Gas flow velocity approx. \SI{9}{m \per s}; Length \SI{150}{km}\arraybackslash\\\hline
+				\raggedright Investment costs & \raggedright Pipeline (Mid-Pressure) & \raggedright \SI{2135}{EUR \per MW \per km} and \SI{850}{EUR \per m} & \raggedright DN300; average operating pressure approx. \SI{23}{bar}; Gas flow velocity approx. \SI{12}{m \per s}; Length \SI{25}{km}\arraybackslash\\\hline
+				\raggedright Fixed costs (excl. gas compressor energy)& \raggedright Pipeline (Transmission) & \raggedright \SI{430}{EUR \per MW} & \raggedright \SI{1.8}{\%} of the investment costs of a transmission pipeline (typical length of \SI{200}{km})\arraybackslash\\\hline
+				\raggedright Fixed costs & \raggedright Pipeline (High-Pressure) & \raggedright \SI{460}{EUR \per MW} & \raggedright \SI{1.8}{\%} of the investment costs of a transmission pipeline (typical length of \SI{150}{km})\arraybackslash\\\hline
+				\raggedright Fixed costs & \raggedright Pipeline (Mid-Pressure) & \raggedright \SI{960}{EUR \per MW} & \raggedright \SI{1.8}{\%} of the investment costs of a transmission pipeline (typical length of \SI{25}{km})\arraybackslash\\\hline
+				\raggedright WACC & \raggedright Pipelines (all grid levels) & \raggedright \SI{5}{\%} & \raggedright Weighted average cost of capital (WACC)\arraybackslash\\\hline
+				\raggedright Amortization period & \raggedright Existing pipelines (all grid levels) & \raggedright \SI{30}{years} & \raggedright Linear depreciation\arraybackslash\\\hline
+				\raggedright Amortization period & \raggedright Refurbished pipelines (all grid levels) & \raggedright \SI{20}{years} & \raggedright Linear depreciation\arraybackslash\\\hline
+				\raggedright Technical lifetime & \raggedright Existing pipelines (all grid levels) & \raggedright \SI{70}{years} & \arraybackslash\\\hline
+	\end{tabular}}
+	\caption{Economic parameters for the gas grid}
+	\label{tab:parameters}
+\end{table}
 
-\section{Details on Austria's natural gas grid and supply 2023}\label{Natural_gas_supply_in_Austria}
-% Altersstruktur
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{1em}
+	\resizebox{1\textwidth}{!}{
+		\begin{tabular}{p{0.2\linewidth}|p{0.225\linewidth}|p{0.25\linewidth}|p{0.325\linewidth}}
+			\toprule
+			\raggedright Marginal operating costs (demand-side)& \raggedright Off-grid solution (High-Pressure) & \raggedright \SI{390}{EUR \per MWh} & \raggedright Of which \SI{20}{EUR \per MWh} transport costs and \SI{370}{EUR \per MWh} storage costs (two-month gas storage)\arraybackslash\\\hline
+			\raggedright Marginal operating costs (demand-side)& \raggedright Off-grid solution (Mid-Pressure) & \raggedright \SI{216.5}{EUR \per MWh} & \raggedright Of which \SI{16.5}{EUR \per MWh} transport costs and \SI{200}{EUR \per MWh} storage costs (one-month gas storage)\arraybackslash\\\hline
+	\end{tabular}}
+	\caption{Economic parameters for the alternative off-grid solution (trucking and on-site gas storage)}
+	\label{tab:off_grid}
+\end{table}
 
-% investments made into the infrastructure
+\section{Details on today's Austrian natural gas grid}\label{Natural_gas_supply_in_Austria}
+A brief overview of today's Austrian gas grid is provided in the following list of bullet points. The following sources are used: \cite{econtrol_grid1, energie}.
 
-\section{Graphische Darstellung von Erzeugung und Verbrauch}\label{app:visualization}
+\begin{itemize}
+	\item Developed over time (first gas pipeline linking Austria, Slovakia, and Italy in 1968);
+	\item Important role as a hub for transiting gas through Europe (mainly to Southern and Western Europe, but recently also vice-versa);
+	\item Total length of the Austrian transmission grid and distribution grid is around \SI{2000}{km} and \SI{44000}{km} respectively;
+	\item Total natural gas demand in Austria per year is around \SI{90}{TWh} (\SI{86.4}{TWh} in 2022 and \SI{94.8}{TWh} in 2021);
+	\item Historically, most of Austria's gas demand has been supplied by Russia (average share of \SI{80}{\%} over the last decades).
+\end{itemize}
 
+\section{Spatial location of the domestic renewable gas generation and demand 2040}\label{app:visualization}
+Figure \ref{generation} and \ref{demand} show the spatial location of the domestic renewable gas generation and natural gas demand in 2030, 2035, and 2040, respectively. 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/appendix/generation.eps}
+	\caption{Spatial location of the domestic renewable gas generation in Austria 2030, 2035, and 2040. Abbreviations: Electrification (Elec), Green Gases (GG), Decentralized Green Gases (DGG), Green Methane (GM).}
+	\label{generation}
+\end{figure}
 
-\section{Detaillierte Gasnetz im Szenario A und B 2040}\label{app_results_2040_extension}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/appendix/demand.eps}
+	\caption{Spatial location of the natural gas demand in Austria 2030, 2035, and 2040. Abbreviations: Electrification (Elec), Green Gases (GG), Decentralized Green Gases (DGG), Green Methane (GM).}
+	\label{demand}
+\end{figure}
+
+\section{Demonstration of the economic trade-off between piped gas supply and the off-grid solution}\label{app_off_grid}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/appendix/Illustration_Trade_Off_Auslastung.png}
+	\caption{Illustration of the model's economic decision between piped gas supply and the off-grid solution. The amount of gas transported corresponds to \SI{1}{\%} of the total transport capacity (determined by an operation of the pipeline at its maximum capacity for the entire year).}
+	\label{line_and_point}
+\end{figure}
+
 
 
 
@@ -126,47 +192,6 @@ The code is published under an open license on GitHub at \textcolor{red}{Link ei
 %	\caption{\added{Overview of the model's mathematical formulation. Abbreviations: Gas pipeline (p), Network level (l), Node (n), Year (y), Month (m)}}
 %	\label{tab:brief}
 %\end{sidewaystable}
-%
-%\section{Current natural gas demands in Vorarlberg, Austria}\label{app_demand}
-%Figure \ref{fig:comp} shows current natural gas demands in Vorarlberg, Austria. The left subfigure shows natural gas demands in Vorarlberg, Austria, in 2018 and 2025. Open data and information from the internal database \cite{EEG} are used to split 2018's values into industry and (building) heating. The values are available at the provincial level (i.e., Vorarlberg, Austria). The 2025's values are calculated bottom-up. That means that we use data on natural gas demands at the community level (between 2018 and 2025). Note that the difference between 2018's and 2025's gas demands reflects the lack of gas demand data at the community level only. 
-%
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=0.75\linewidth]{figures/Comparison_of_the_demand.eps}
-%	\caption{Overview of gas demands in 2018 and 2025 (left) and share of natural gas in total energy demand (right). Data: open data available; Avg.: shares calculated based on the average gas demand per capita in Vorarlberg, Austria; All: Data and Avg. combined.}
-%	\label{fig:comp}
-%\end{figure}
-%
-%The right subfigure indicates the approach to calculating gas demands if no open data are available. It shows the share of natural gas demands in energy demand at the community level. The first item (Data) shows the distribution for those communities where data are available. The second item (Avg.) shows the distribution of gas demand shares using the average value of gas demand per capita in Vorarlberg, Austria. This calculation process based on the average gas demand is used for communities where no data are available. The third item (All) shows the distribution of gas demand shares for all communities.
-%
-%
-%
-%\section{Assumptions regarding lumpiness of gas pipelines}\label{app:lum}
-%Similar to \cite{von2006reform}, we assume a simplified relationship between the diameter of gas pipelines and their capacities. Accordingly, we assume that the capacity of high- and mid-pressure gas pipelines increases by 2.5 times the power of the diameter. Table \ref{tab:lum} summarizes the set of potential diameters and the corresponding calculated capacity. 
-%
-%\definecolor{Gray}{gray}{0.95}
-%\begin{table}[h]
-%	\centering
-%	\scalebox{1}{
-%			\renewcommand{\arraystretch}{1.4}
-%			\begin{tabular}{c|c}
-%					Diameter in meters & Pipeline capacity in MW\\\hline
-%					0.1 & 0.82\\
-%					0.2 & 4.62\\
-%					0.3 & 12.72\\
-%					0.4 & 26.11\\
-%					0.5 & 45.62\\
-%					0.6 & 71.96\\
-%					0.7 & 105.8\\
-%					0.8 & 147.73\\
-%					0.9 & 198.31\\
-%					1.0 & 258.07\\
-%					1.1 & 327.51\\
-%					1.15 & 366.0\\
-%					1.2 & 407.09\\
-%					1.3 & 497.27\\
-%			\end{tabular}}
-%	\caption{Set of diameters of gas pipelines and assumed pipeline capacity.}
-%	\label{tab:lum}
-%\end{table}
+
+
 \end{document}

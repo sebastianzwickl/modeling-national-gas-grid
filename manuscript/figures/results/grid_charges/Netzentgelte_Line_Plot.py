@@ -7,7 +7,7 @@ import pyam
 import matplotlib.ticker as tkr
 import matplotlib.patches as mpatches
 
-color = "#DD58D6"
+color = "gray"
 
 group_thousands = tkr.FuncFormatter(lambda x, pos: "{:0,d}".format(int(x)))
 plt.rcParams.update(plt.rcParamsDefault)

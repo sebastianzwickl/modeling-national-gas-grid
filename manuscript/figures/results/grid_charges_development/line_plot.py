@@ -16,29 +16,23 @@ gm = [1.3, 1.1]
 
 x = [0, 1]
 
-for elec, color in [[elec, '#3F497F'], [gg, '#9DC08B'], [dgg, '#FF8551'], [gm, '#89CFFD']]:
+for elec, color, line_st in [[elec, 'gray', 'dotted'], [gg, 'gray', 'dashdot'], [dgg, 'gray', 'dashed'], [gm, 'gray', 'solid']]:
+    
     ax.plot(x, elec, 
             marker='d', 
             color=color, 
             markersize=8,
             markeredgewidth=0.25,
-            markeredgecolor="black"
+            markeredgecolor="gray",
+            linestyle=line_st
             )
-    ax.plot(x, elec, 
-            marker='d', 
-            color='black', 
-            linewidth=1.75,
-            zorder=-1, 
-            linestyle='solid'
-            )
-#     ax1.plot(
-#     verbrauch[2:4],
-#     netzentgelte[2:4],
-#     color="black",
-#     zorder=-1,
-#     linewidth=2.5,
-#     linestyle="solid",
-# )
+    # ax.plot(x, elec, 
+    #         marker='d', 
+    #         color='black', 
+    #         linewidth=1.75,
+    #         zorder=-1, 
+    #         linestyle=line_style
+    #         )
     ax.text(
             0.55, 
             elec[1] + (elec[0] - elec[1]) / 2 + 0.35,
@@ -47,6 +41,7 @@ for elec, color in [[elec, '#3F497F'], [gg, '#9DC08B'], [dgg, '#FF8551'], [gm, '
             fontsize=9,
             color=color,
     )
+    
 
 
 ax.set_xlim([-0.25, 1.25])
@@ -64,12 +59,12 @@ ax.spines["left"].set_linewidth(1.1)
 ax.set_ylabel('Grid costs in EUR/MWh')
 
 _patches = [
-Line2D(range(1), range(1), color='#3F497F', label='Elec', linewidth=1.5),
-Line2D(range(1), range(1), color='#9DC08B', label='GG', linewidth=1.5),
-Line2D(range(1), range(1), color='#FF8551', label='DGG', linewidth=1.5),
-Line2D(range(1), range(1), color='#89CFFD', label='GM', linewidth=1.5),
+Line2D(range(1), range(1), color='gray', label='Elec', linewidth=1.5, linestyle='dotted'),
+Line2D(range(1), range(1), color='gray', label='GG', linewidth=1.5, linestyle='dashdot'),
+Line2D(range(1), range(1), color='gray', label='DGG', linewidth=1.5, linestyle='dashed'),
+Line2D(range(1), range(1), color='gray', label='GM', linewidth=1.5),
 ]
-_legend = ax.legend(handles=_patches, loc='upper right', facecolor=None, fontsize=8, framealpha=1, handlelength=0.75,
+_legend = ax.legend(handles=_patches, loc='upper right', facecolor=None, fontsize=8, framealpha=1, handlelength=1.75,
                 handletextpad=0.5, ncol=4, borderpad=0.35, columnspacing=1, edgecolor="grey", frameon=True, bbox_to_anchor=(1.05, 1.05))
 _legend.get_frame().set_linewidth(0.25)
 plt.tight_layout()
