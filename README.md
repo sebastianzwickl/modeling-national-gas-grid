@@ -1,1 +1,1 @@
-# Austrian_Gas_Grid_2040
+# Shrinking together and pulling apart: insights from a national gas grid with declining natural gas demand and increasing domestic renewable gas generation by 2040
