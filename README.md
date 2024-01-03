@@ -22,7 +22,7 @@ This paper studies the development of the Austrian gas grid by 2040 under differ
   
 ## Data
 
-Will be added here.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10454605.svg)](https://doi.org/10.5281/zenodo.10454605)
 
 ## Acknowledgement
 
