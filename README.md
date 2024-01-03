@@ -11,12 +11,15 @@ This repository includes materials and methods of the paper published in _Energy
 
 ## Overview & Abstract
 
-This paper studies the development of the Austrian gas grid by 2040 under different decarbonization scenarios, ranging from electrifying most energy services to importing large amounts of renewable methane. The Austrian gas grid serves as a case study representative for those gas grids confronted with a drop in natural gas demand and an increase in domestic renewable gas generation in the future. A mixed-integer optimization model with a focus on the detailed representation of the existing grid (gas grid levels, pipeline capacity, route, and age) is used to determine the cost-optimal trade-off decision between expected low-utilized gas pipelines and an off-grid supply alternative (e.g., trucking and on-site gas storage) in a decarbonized Austrian and European energy system. Optimality determines whether to operate, decommission, or make replacement investments in the grid's pipelines. Based on the required gas grid 2040 and its annual grid costs, estimates for tariffs of end customers are given. The paper's main conclusion is that the domestic distributed renewable gas generation uptake will be associated with the need for an area-wide gas grid, but one that will be significantly less utilized. Future work could address, among other things, the exploration of the spatial interplay of local production and demand by forming regional clusters of renewable gas.
+This paper studies the development of the Austrian gas grid by 2040 under different decarbonization scenarios, ranging from electrifying most energy services to importing large amounts of renewable methane. The Austrian gas grid serves as a case study representative for those gas grids confronted with a drop in natural gas demand and an increase in domestic renewable gas generation in the future. A mixed-integer optimization model with a focus on the detailed representation of the existing grid (gas grid levels, pipeline capacity, route, and age) is used to determine the cost-optimal trade-off decision between expected low-utilized gas pipelines and an off-grid supply alternative (e.g., trucking and on-site gas storage) in a decarbonized Austrian and European energy system. Optimality determines whether to operate, decommission, or make replacement investments in the grid's pipelines. Based on the required gas grid 2040 and its annual grid costs, estimates for tariffs of end customers are given. The paper's main conclusion is that the domestic distributed renewable gas generation uptake will be associated with the need for an area-wide gas grid, but one that will be significantly less utilized. Future work could address, among other things, the exploration of the spatial interplay of local production and demand by forming regional clusters of renewable gas.  
+<br>
 
+    
 <p align="center" width="100%">
-	<img src="./_static//Sketch.png" width=75% height=75% align="center" alt="Sketch" />
+	<img src="./_static//gasgrid.jpg" width=75% height=75% align="center" alt="Sketch" />
 </p>
-
+<be>
+  
 ## Data
 
 Will be added here.
