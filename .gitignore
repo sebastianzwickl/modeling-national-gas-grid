@@ -302,4 +302,5 @@ TSWLatexianTemp*
 
 # exclude the following folders:
 literature/*
-workflow/230905_full draft/230424_Model_Runs_Endbericht/*
+workflow/*
+manuscript/*
