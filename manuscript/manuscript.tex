@@ -3,9 +3,10 @@
 \input{packages.tex}
 
 \begin{document}
+	\listofchanges
 \begin{frontmatter}
 
-\title{Shrinking together and pulling apart: insights from a national gas grid with declining natural gas demand and increasing domestic renewable gas generation by 2040}
+\title{\added{Modeling insights from the Austrian national gas grid under declining natural gas demand and increasing domestic renewable gas generation by 2040}}
 
 \author[1,2]{Sebastian Zwickl-Bernhard\corref{cor1}}
 \ead{zwickl@eeg.tuwien.ac.at}
@@ -22,16 +23,15 @@
 \address[3]{Frontier Economics Limited, Im Zollhafen 24, 50678 Köln, Deutschland}
 
 \begin{abstract}
-	This paper studies the development of the Austrian gas grid by 2040 under different decarbonization scenarios, ranging from electrifying most energy services to importing large amounts of renewable methane. The Austrian gas grid serves as a case study representative for those gas grids confronted with a drop in natural gas demand and an increase in domestic renewable gas generation in the future. A mixed-integer optimization model with a focus on the detailed representation of the existing grid (gas grid levels, pipeline capacity, route, and age) is used to determine the cost-optimal trade-off decision between expected low-utilized gas pipelines and an off-grid supply alternative (e.g., trucking and on-site gas storage) in a decarbonized Austrian and European energy system. Based on the required gas grid 2040 and its annual grid costs, estimates for tariffs of end customers are given. The paper's main conclusion is that the domestic distributed renewable gas generation uptake will be associated with the need for an area-wide gas grid, but one that will be significantly less utilized.
+	This paper studies the development of the Austrian gas grid by 2040 under different decarbonization scenarios, ranging from electrifying most energy services to importing large amounts of renewable methane. The Austrian gas grid serves as a case study representative for those gas grids confronted with a drop in natural gas demand and an increase in domestic renewable gas generation in the future. A mixed-integer optimization model with a focus on the detailed representation of the existing grid (gas grid levels, pipeline capacity, route, and age) is used to determine the cost-optimal trade-off decision between expected low-utilized gas pipelines and an off-grid supply alternative (e.g., trucking and on-site gas storage) in a decarbonized Austrian and European energy system. \added{Optimality determines whether to operate, decommission, or make replacement investments in the grid's pipelines.} Based on the required gas grid 2040 and its annual grid costs, estimates for tariffs of end customers are given. The paper's main conclusion is that the domestic distributed renewable gas generation uptake will be associated with the need for an area-wide gas grid, but one that will be significantly less utilized. \added{Future work could address, among other things, the exploration of the spatial interplay of local production and demand by forming regional clusters of renewable gas.}
 \end{abstract}
 
 \begin{keyword}
-	Gas grid; natural gas demand; domestic renewable gas generation; 2040
+	Gas grid; natural gas demand; domestic renewable gas production; 2040
 
 \end{keyword}
 \end{frontmatter}
-
-\newpage
+\vspace*{1.5cm}
 \section*{Nomenclature}
 \begin{center}
 	\renewcommand{\arraystretch}{1.0}
@@ -83,7 +83,7 @@ The code is published under an open license on GitHub at \textcolor{gray}{(Link 
 
 \section*{Acknowledgments}
 This work was supported by the Federal Ministry Republic of Republic Austria
-for Climate Action, Environment, Energy, Mobility, Innovation and Technology under the project Gas-Infra-AT-2040 ("The future role of gas infrastructure in a climate-neutral Austria by 2040"). The authors acknowledge TU Wien Bibliothek for financial support through its Open Access Funding Programme.
+for Climate Action, Environment, Energy, Mobility, Innovation and Technology under the project Gas-Infra-AT-2040 ("The future role of gas infrastructure in a climate-neutral Austria by 2040"). \added{The content and interpretation of the results of this work do not necessarily reflect the position of the client.} The authors acknowledge TU Wien Bibliothek for financial support through its Open Access Funding Programme.
 
 
 \bibliography{mybibfile}
@@ -164,34 +164,5 @@ Figure \ref{generation} and \ref{demand} show the spatial location of the domest
 	\caption{Illustration of the model's economic decision between piped gas supply and the off-grid solution. The amount of gas transported corresponds to \SI{1}{\%} of the total transport capacity (determined by an operation of the pipeline at its maximum capacity for the entire year).}
 	\label{line_and_point}
 \end{figure}
-
-
-
-
-
-%
-%\begin{sidewaystable}
-%	\centering
-%	\setlength{\extrarowheight}{.5em}
-%	\resizebox{1\textwidth}{!}{
-%		\begin{tabular}{cclll}
-%			\toprule
-%			\multicolumn{2}{c}{Equation} & \multicolumn{3}{c}{Qualitative/high-level explanation of the mathematical formulation}\\\cmidrule(lr){1-2}\cmidrule(lr){3-5}
-%			Number & Dimension & Type & Keyword & Description\\\hline
-%			\ref{objective} & 1 & Economic & Objective &  Minimize gas network operator's total costs\\
-%			\ref{eq:capex} & 1 & Economic  & Capex &  Capital cost of the gas pipelines\\
-%			\ref{eq:opex} & 1 & Economic & Opex & Fixed operating costs of gas pipelines\\
-%			\ref{eq:total_book_value} & ($p \times l \times y$) & Economic & Book values & Book value per gas pipeline, network level and year\\
-%			\ref{eq:revenues} & ($n \times l \times y \times m$) & Economic & Revenues & Revenues for supplying gas demand through network charge\\
-%			\ref{bound1}, \ref{bound2} & ($p \times l \times y$) & Technical & Gas transport & Restriction of the gas transport per gas pipeline, network level and year\\
-%			\ref{eq:balance} & ($n \times l \times y \times m$) & Technical & Gas balance & Gas balance constraint per node, network level, year and month\\
-%			\ref{eq:demand} &  ($n \times l \times y \times m$) & Technical & Gas demand & Total gas demand as sum of local demand and delivered gas\\
-% 			\ref{eq:source} &  ($n \times l \times y \times m$) & Technical & Gas source & Total gas source as sum of local production and gas delivered\\
-%			\bottomrule
-%	\end{tabular}}
-%	\caption{\added{Overview of the model's mathematical formulation. Abbreviations: Gas pipeline (p), Network level (l), Node (n), Year (y), Month (m)}}
-%	\label{tab:brief}
-%\end{sidewaystable}
-
 
 \end{document}
